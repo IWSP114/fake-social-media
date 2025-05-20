@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { JSX, useEffect, useRef, useState } from 'react';
 import HeaderMenu from './headerMenu';
 import HeaderMessenger from './headerMessenger';
+import HeaderNotification from './headerNotification';
 
 export function Header(): JSX.Element {
   const pathname: string = usePathname();
@@ -28,8 +29,11 @@ export function Header(): JSX.Element {
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const menuContainerRef = useRef<HTMLDivElement>(null);
 
-  const messengerButtonRef = useRef<HTMLDivElement>(null);
-  const messengerContainerRef = useRef<HTMLButtonElement>(null);
+  const messengerButtonRef = useRef<HTMLButtonElement>(null);
+  const messengerContainerRef = useRef<HTMLDivElement>(null);
+
+  const notificationButtonRef = useRef<HTMLButtonElement>(null);
+  const notificationContainerRef = useRef<HTMLDivElement>(null);
 
   function handleShowMenu() {
     setShowMenu(s => !s);
@@ -41,6 +45,12 @@ export function Header(): JSX.Element {
     setShowMenu(false);
     setShowMessenger(s => !s);
     setShowNotification(false);
+  }
+
+  function handleShowNotification() {
+    setShowMenu(false);
+    setShowMessenger(false);
+    setShowNotification(s => !s);
   }
 
   useEffect(() => {
@@ -112,7 +122,7 @@ export function Header(): JSX.Element {
         </li>
 
         <li>
-          <button ref={messengerContainerRef} className="rounded-full w-10 h-10 p-3 bg-gray-300 cursor-pointer active:scale-80" onClick={handleShowMessenger}>
+          <button ref={messengerButtonRef} className="rounded-full w-10 h-10 p-3 bg-gray-300 cursor-pointer active:scale-80" onClick={handleShowMessenger}>
             <Image 
               src={MessengerIcon} 
               alt="User Icon" 
@@ -122,13 +132,13 @@ export function Header(): JSX.Element {
                 objectFit: 'contain'
               }}/>
           </button>
-          <div ref={messengerButtonRef}>
+          <div ref={messengerContainerRef}>
             <HeaderMessenger visable={showMessenger} />
           </div>
         </li>
 
         <li>
-          <button className="rounded-full w-10 h-10 p-3 cursor-pointer bg-gray-300 active:scale-80">
+          <button ref={notificationButtonRef} className="rounded-full w-10 h-10 p-3 cursor-pointer bg-gray-300 active:scale-80" onClick={handleShowNotification}>
             <Image 
               src={BellIcon} 
               alt="User Icon" 
@@ -138,6 +148,9 @@ export function Header(): JSX.Element {
                 objectFit: 'contain'
               }}/>
           </button>
+          <div ref={notificationContainerRef}>
+            <HeaderNotification visable={showNotification} />
+          </div>
         </li>
 
         <li>
