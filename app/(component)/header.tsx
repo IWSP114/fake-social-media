@@ -8,15 +8,64 @@ import MessengerIcon from '../../assert/Messenger.png'
 import BellIcon from '../../assert/Bell.png'
 import Image from 'next/image'
 import Link from 'next/link';
+import { JSX, useEffect, useRef, useState } from 'react';
+import HeaderMenu from './headerMenu';
+import HeaderMessenger from './headerMessenger';
 
-export function Header() {
-  const pathname = usePathname();
+export function Header(): JSX.Element {
+  const pathname: string = usePathname();
 
-  const isHome = pathname === "/";
-  const isFriends = pathname === "/friends";
-  const isVideo = pathname === "/video";
-  const isMarket = pathname === "/market-place";
-  const isGames = pathname === "/games";
+  const isHome: boolean = pathname === "/";
+  const isFriends: boolean = pathname === "/friends";
+  const isVideo: boolean = pathname === "/video";
+  const isMarket: boolean = pathname === "/market-place";
+  const isGames: boolean = pathname === "/games";
+
+  const [showMenu, setShowMenu] = useState(false);
+  const [showMessenger, setShowMessenger] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const menuContainerRef = useRef<HTMLDivElement>(null);
+
+  const messengerButtonRef = useRef<HTMLDivElement>(null);
+  const messengerContainerRef = useRef<HTMLButtonElement>(null);
+
+  function handleShowMenu() {
+    setShowMenu(s => !s);
+    setShowMessenger(false);
+    setShowNotification(false);
+  }
+
+  function handleShowMessenger() {
+    setShowMenu(false);
+    setShowMessenger(s => !s);
+    setShowNotification(false);
+  }
+
+  useEffect(() => {
+    if (!showMenu) return;
+    function handleClickOutside(event: MouseEvent) {
+      // Menu button situation
+      if (
+        menuContainerRef.current &&
+        !menuContainerRef.current.contains(event.target as Node) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
+        setShowMenu(false);
+      } else if ( // Messenger button situation
+        messengerContainerRef.current &&
+        !messengerContainerRef.current.contains(event.target as Node) &&
+        messengerButtonRef.current &&
+        !messengerButtonRef.current.contains(event.target as Node)
+      ) {
+        setShowMessenger(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showMenu]);
 
   return (
     <div className="bg-white flex flex-row justify-between h-16 shadow-md">
@@ -46,7 +95,7 @@ export function Header() {
       
       <ul className="mr-3 flex items-center gap-2 flex-nowrap">
         <li>
-          <div className="rounded-full w-10 h-10 p-3 cursor-pointer bg-gray-300">
+          <button ref={menuButtonRef} className="rounded-full w-10 h-10 p-3 bg-gray-300 cursor-pointer active:scale-80" onClick={handleShowMenu}>
             <Image 
               src={NineSquaresIcon} 
               alt="User Icon" 
@@ -54,12 +103,16 @@ export function Header() {
                 width: 'auto',
                 height: '100%',
                 objectFit: 'cover'
-              }}/>
+              }}
+            />
+          </button>
+          <div ref={menuContainerRef}>
+            <HeaderMenu visable={showMenu} />
           </div>
         </li>
 
         <li>
-          <div className="rounded-full w-10 h-10 p-3 cursor-pointer bg-gray-300">
+          <button ref={messengerContainerRef} className="rounded-full w-10 h-10 p-3 bg-gray-300 cursor-pointer active:scale-80" onClick={handleShowMessenger}>
             <Image 
               src={MessengerIcon} 
               alt="User Icon" 
@@ -68,11 +121,14 @@ export function Header() {
                 height: '100%',
                 objectFit: 'contain'
               }}/>
+          </button>
+          <div ref={messengerButtonRef}>
+            <HeaderMessenger visable={showMessenger} />
           </div>
         </li>
 
         <li>
-          <div className="rounded-full w-10 h-10 p-3 cursor-pointer bg-gray-300">
+          <button className="rounded-full w-10 h-10 p-3 cursor-pointer bg-gray-300 active:scale-80">
             <Image 
               src={BellIcon} 
               alt="User Icon" 
@@ -81,11 +137,11 @@ export function Header() {
                 height: '100%',
                 objectFit: 'contain'
               }}/>
-          </div>
+          </button>
         </li>
 
         <li>
-          <div className="rounded-full w-10 h-10 p-1 cursor-pointer bg-gray-300">
+          <button className="rounded-full w-10 h-10 p-1 cursor-pointer bg-gray-300 active:scale-80">
             <Image 
               src={UserIcon} 
               alt="User Icon" 
@@ -94,7 +150,7 @@ export function Header() {
                 height: '100%',
                 objectFit: 'contain'
               }}/>
-          </div>
+          </button>
         </li>
       </ul>
     </div>
