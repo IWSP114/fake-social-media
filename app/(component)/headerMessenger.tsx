@@ -4,7 +4,7 @@ import TextCloud from '../../assert/cloud-icon.png'
 
 function HeaderMessenger({ visable }: { visable: boolean }) {
   return (
-    <div className={`bg-white fixed top-16 right-5 h-full p-4 pr-6 min-w-100 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
+    <div className={`z-99 bg-white fixed top-16 right-5 h-full p-4 pr-6 min-w-100 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
       <h3 className="font-bold text-2xl mb-2">Messenger</h3>
       <div className="w-full flex items-center justify-start">
         <input className="p-2 bg-slate-100 text-slate-800 rounded-2xl flex-grow text-sm" type='text' placeholder="Search..." />

@@ -1,10 +1,10 @@
-import React, { Fragment, memo } from 'react'
+import React, { memo } from 'react'
 import Image from 'next/image'
 import TextCloud from '../../assert/cloud-icon.png'
 
 function HeaderNotification({ visable }: { visable: boolean }) {
   return (
-    <div className={`bg-white fixed top-16 right-5 h-full p-4 pr-6 min-w-100 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
+    <div className={`z-99 bg-white fixed top-16 right-5 h-full p-4 pr-6 min-w-100 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
       <h3 className="font-bold text-2xl">Notification</h3>
 
       <div className="flex items-center justify-start gap-4 pt-4">

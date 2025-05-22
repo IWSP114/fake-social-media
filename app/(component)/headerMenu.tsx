@@ -4,7 +4,7 @@ import StarIcon from '../../assert/star-icon.png'
 
 function HeaderMenu({ visable }: { visable: boolean }) {
   return (
-    <div className={`bg-slate-100 fixed top-16 right-5 p-2 pr-10 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
+    <div className={`z-99 bg-slate-100 fixed top-16 right-5 p-2 pr-10 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
       <h3 className="font-bold text-2xl m-2">Menu</h3>
       <div className="flex gap-4">
 

@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Book Store 123",
-  description: "Book Store E-Commerce Platform",
+  title: "Fake Social Media",
+  description: "Fake Social Media",
 };
 
 export default function RootLayout({
@@ -28,8 +28,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased select-none`}
       >
-        <Header />
-        {children}
+        <div className="min-h-screen bg-slate-100">
+          <Header />
+          {children}
+        </div>
+        
       </body>
     </html>
   );

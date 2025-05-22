@@ -3,9 +3,9 @@
 import { usePathname } from 'next/navigation';
 import AppIcon from '../../assert/header-icon.png'
 import UserIcon from '../../assert/discord-logo.png'
-import NineSquaresIcon from '../../assert/nine-squares.png'
-import MessengerIcon from '../../assert/Messenger.png'
-import BellIcon from '../../assert/Bell.png'
+import NineSquaresIcon from '../../assert/nine-squares.svg'
+import MessengerIcon from '../../assert/Messenger.svg'
+import BellIcon from '../../assert/Bell.svg'
 import Image from 'next/image'
 import Link from 'next/link';
 import { JSX, useEffect, useRef, useState } from 'react';
@@ -78,7 +78,7 @@ export function Header(): JSX.Element {
   }, [showMenu]);
 
   return (
-    <div className="bg-white flex flex-row justify-between h-16 shadow-md">
+    <div className="bg-white flex flex-row justify-between h-16 shadow-lg z-99">
       <div className="ml-3 flex flex-nowrap items-center gap-3 h-full w-auto">
         <Link href="/" className="h-14 w-14">
           <Image 
