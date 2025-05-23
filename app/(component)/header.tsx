@@ -54,7 +54,7 @@ export function Header(): JSX.Element {
   }
 
   useEffect(() => {
-    if (!showMenu) return;
+
     function handleClickOutside(event: MouseEvent) {
       // Menu button situation
       if (
@@ -64,7 +64,9 @@ export function Header(): JSX.Element {
         !menuButtonRef.current.contains(event.target as Node)
       ) {
         setShowMenu(false);
-      } else if ( // Messenger button situation
+      } 
+
+      if ( // Messenger button situation
         messengerContainerRef.current &&
         !messengerContainerRef.current.contains(event.target as Node) &&
         messengerButtonRef.current &&
@@ -72,13 +74,22 @@ export function Header(): JSX.Element {
       ) {
         setShowMessenger(false);
       }
+
+      if ( // Messenger button situation
+        notificationContainerRef.current &&
+        !notificationContainerRef.current.contains(event.target as Node) &&
+        notificationButtonRef.current &&
+        !notificationButtonRef.current.contains(event.target as Node)
+      ) {
+        setShowNotification(false);
+      }
     }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [showMenu]);
 
   return (
-    <div className="bg-white flex flex-row justify-between h-16 shadow-lg z-99">
+    <div className="sticky top-0 bg-white flex flex-row justify-between h-16 shadow-lg z-99">
       <div className="ml-3 flex flex-nowrap items-center gap-3 h-full w-auto">
         <Link href="/" className="h-14 w-14">
           <Image 

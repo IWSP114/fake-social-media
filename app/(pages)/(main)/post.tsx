@@ -1,0 +1,66 @@
+import UserIcon from "../../../assert/MainPage/user-icon.png"
+import Image from "next/image"
+
+export function Post({ username, message } : { username: string, message: string }) {
+  return (
+    <div className="w-1/2 border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
+          <div className="flex flex-col">
+            {/* Post Header */}
+            <div className="flex justify-between p-2">
+              {/* Post Left Top */}
+              <div className="flex gap-2 tracking-tighter">
+                <div className="relative rounded-full w-10 h-10 overflow-hidden">
+                  <Image
+                    src={UserIcon}
+                    alt="User Icon"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-col gap-0 p-0">
+                  <h2 className="font-bold text-base">{username}</h2>
+                  <p className="font-bold text-sm text-gray-600">20 Mins ago</p>
+                </div>
+
+              </div>
+
+              {/* Post Right Top */}
+              <div className="flex items-center">
+                <button className="rounded-full hover:bg-gray-300 p-2 text-lg">X</button>
+              </div>
+            </div>
+
+            {/* Post Body */}
+            <div className="p-2 font-sans select-text break-normal">
+              {message}
+              Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! 
+            </div>
+
+            {/* Post Footer */}
+            <div className="flex justify-between p-2 border-gray-300 border-b-1 border-solid">
+              <div className="text-sm font-bold text-gray-500 tracking-tighter">100 Likes</div>
+
+              <div className="flex gap-2">
+                <div className="text-sm font-bold text-gray-500 tracking-tighter">3 Comments</div>
+                <div className="text-sm font-bold text-gray-500 tracking-tighter">2 Shares</div>
+              </div>
+            </div>
+
+            <div className="flex gap-2 items-center mt-2">
+              <div className="flex flex-1 font-semibold text-gray-600 tracking-tight justify-center items-center rounded-sm hover:bg-gray-300 cursor-pointer">
+                Like
+              </div>
+
+              <div className="flex flex-1 font-semibold text-gray-600 tracking-tight justify-center items-center rounded-sm hover:bg-gray-300 cursor-pointer">
+                Comments
+              </div>
+
+              <div className="flex flex-1 font-semibold text-gray-600 tracking-tight justify-center items-center rounded-sm hover:bg-gray-300 cursor-pointer">
+                Share
+              </div>
+            </div>
+
+          </div>
+        </div>
+  )
+}
