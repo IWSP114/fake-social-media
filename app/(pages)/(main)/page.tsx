@@ -3,6 +3,8 @@ import UserIcon from "../../../assert/MainPage/user-icon.png"
 import { LeftSideBar } from "./leftSideBar"
 import { RightSideBar } from "./rightSideBar"
 import { Post } from "./post";
+import { PostStory } from "./postStory";
+import { Story } from "./story";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,7 +16,7 @@ export default function Home() {
       {/* Center */}
       <div className="flex-1 flex flex-col items-center py-4">
         {/* User Post Head */}
-        <div className="w-1/2 border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
+        <div className="w-2/5 border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
           {/* User Icon */}
           <div className="flex gap-2 py-2 border-gray-200 border-b-1 border-solid">
             <div className="relative rounded-full w-10 h-10 overflow-hidden">
@@ -42,6 +44,23 @@ export default function Home() {
             </div>
 
           </div>
+
+        </div>
+
+        {/* Story / Stories */}
+        <div className="w-2/5 flex items-center gap-2 h-50 mb-2 overflow-x-scroll">
+
+          {/* Post Story */}
+          <PostStory />
+
+          <Story />
+          <Story />
+          <Story />
+          <Story />
+          <Story />
+          <Story />
+          <Story />
+          <Story />
 
         </div>
 

@@ -12,7 +12,7 @@ import Image from "next/image"
 
 export function LeftSideBar() {
   return (
-    <div className="sticky top-16 w-1/6 h-[calc(100vh-5rem)] hidden md:flex flex-col justify-between py-4 border-gray-300 border-r-1 border-solid">
+    <div className="fixed top-16 left-0 w-1/6 h-[calc(100vh-5rem)] hidden md:flex flex-col justify-between py-4 border-gray-300 border-r-1 border-solid">
       <div className="flex flex-col">
         <h1 className="mx-6 my-2 font-bold italic font-sans text-xl">Fake Social Media</h1>
 

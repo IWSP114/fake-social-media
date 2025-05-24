@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export function RightSideBar() {
   return (
-    <div className="sticky top-16 w-1/6 h-[calc(100vh-5rem)] hidden md:flex flex-col px-2 text-stone-800 border-gray-300 border-l-1 border-solid">
+    <div className="fixed top-16 right-0 w-1/6 h-[calc(100vh-5rem)] hidden md:flex flex-col px-2 text-stone-800 border-gray-300 border-l-1 border-solid">
         {/* Contact Person */}
         <div className="w-full flex flex-col border-gray-500 border-b-1 border-solid py-4">
 

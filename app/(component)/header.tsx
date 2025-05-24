@@ -89,7 +89,7 @@ export function Header(): JSX.Element {
   }, [showMenu]);
 
   return (
-    <div className="sticky top-0 bg-white flex flex-row justify-between h-16 shadow-lg z-99">
+    <div className="fixed top-0 right-0 left-0 bg-white flex flex-row justify-between h-16 shadow-lg z-99">
       <div className="ml-3 flex flex-nowrap items-center gap-3 h-full w-auto">
         <Link href="/" className="h-14 w-14">
           <Image 

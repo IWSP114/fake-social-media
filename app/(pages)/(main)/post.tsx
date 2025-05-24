@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export function Post({ username, message } : { username: string, message: string }) {
   return (
-    <div className="w-1/2 border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
+    <div className="w-2/5 border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
           <div className="flex flex-col">
             {/* Post Header */}
             <div className="flex justify-between p-2">
