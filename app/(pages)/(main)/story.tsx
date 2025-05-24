@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function Story() {
   return (
-    <div className="flex flex-col h-full min-w-30 rounded-xl hover:opacity-80 cursor-pointer">
+    <div className="flex flex-col h-full w-32 min-w-32 flex-shrink-0 rounded-xl hover:opacity-80 cursor-pointer">
       {/* Story Image */}
       <div className="relative h-full w-full overflow-hidden rounded-xl">
         <Image

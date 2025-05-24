@@ -1,3 +1,6 @@
+"use client"
+
+import React, { useRef } from 'react';
 import UserIcon from "../../../assert/MainPage/user-icon.png"
 
 import { LeftSideBar } from "./leftSideBar"
@@ -8,15 +11,31 @@ import { Story } from "./story";
 import Image from "next/image";
 
 export default function Home() {
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if(scrollRef.current) {
+      scrollRef.current.scrollLeft -= 200;
+    }
+  }
+
+  const scrollRight = () => {
+    if(scrollRef.current) {
+      scrollRef.current.scrollLeft += 200;
+    }
+  }
+
+
   return (
     <div className="flex w-screen min-h-screen z-0">
       {/* Left side */}
       <LeftSideBar />
 
       {/* Center */}
-      <div className="flex-1 flex flex-col items-center py-4">
+      <div className="flex-1 flex flex-col items-center py-4 min-w-0">
         {/* User Post Head */}
-        <div className="w-2/5 border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
+        <div className="w-full max-w-2/5 mx-auto border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
           {/* User Icon */}
           <div className="flex gap-2 py-2 border-gray-200 border-b-1 border-solid">
             <div className="relative rounded-full w-10 h-10 overflow-hidden">
@@ -48,19 +67,25 @@ export default function Home() {
         </div>
 
         {/* Story / Stories */}
-        <div className="w-2/5 flex items-center gap-2 h-50 mb-2 overflow-x-scroll">
+        <div className="relative w-2/5 h-50 mb-2" >
 
-          {/* Post Story */}
-          <PostStory />
+          <button className="absolute left-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg text-gray-600 z-99" onClick={scrollLeft}>Left</button>
+          <button className="absolute right-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg text-gray-600 z-99" onClick={scrollRight}>Right</button>
 
-          <Story />
-          <Story />
-          <Story />
-          <Story />
-          <Story />
-          <Story />
-          <Story />
-          <Story />
+          <div className="flex items-center max-w-full h-full gap-2 overflow-x-hidden" ref={scrollRef} style={{ scrollBehavior: "smooth" }}>
+            {/* Post Story */}
+            <PostStory />
+
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+            <Story />
+          </div>
+          
 
         </div>
 
