@@ -26,7 +26,7 @@ export function Post({ username, message } : { username: string, message: string
 
               {/* Post Right Top */}
               <div className="flex items-center">
-                <button className="rounded-full hover:bg-gray-300 p-2 text-lg">X</button>
+                <button className="rounded-full hover:bg-gray-300 p-2 text-lg cursor-pointer">X</button>
               </div>
             </div>
 
@@ -38,11 +38,11 @@ export function Post({ username, message } : { username: string, message: string
 
             {/* Post Footer */}
             <div className="flex justify-between p-2 border-gray-300 border-b-1 border-solid">
-              <div className="text-sm font-bold text-gray-500 tracking-tighter">100 Likes</div>
+              <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">100 Likes</div>
 
               <div className="flex gap-2">
-                <div className="text-sm font-bold text-gray-500 tracking-tighter">3 Comments</div>
-                <div className="text-sm font-bold text-gray-500 tracking-tighter">2 Shares</div>
+                <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">3 Comments</div>
+                <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">2 Shares</div>
               </div>
             </div>
 

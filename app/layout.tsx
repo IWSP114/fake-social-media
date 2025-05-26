@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased select-none`}
       >
-        <div className="min-h-screen overflow-x-hidden bg-slate-100">
+        <div className="min-h-screen bg-slate-100">
           <Header />
           <div className="pt-16">
             {children}

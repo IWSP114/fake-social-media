@@ -11,7 +11,7 @@ export function RightSideBar() {
 
           {/* Contact Person Title */}
           <div className="flex items-center justify-between pt-2">
-            <h3 className="font-semibold antialiased text-lg text-slate-700">Contact Person</h3>
+            <h3 className="font-semibold antialiased text-lg text-slate-700 ml-2">Contact Person</h3>
 
             <div className="rounded-full w-6 h-6 cursor-pointer">
               <Image
@@ -82,7 +82,7 @@ export function RightSideBar() {
         {/* Group Chat Room */}
         <div className="w-full flex flex-col border-gray-500 border-b-1 border-solid py-4">
           <div className="flex items-center justify-between pt-2">
-            <h3 className="font-semibold antialiased text-lg text-slate-700">Group Chat Room</h3>
+            <h3 className="font-semibold antialiased text-lg text-slate-700 ml-2">Group Chat Room</h3>
           </div>
 
           <div className="flex items-center gap-2 rounded-lg hover:bg-gray-200 p-2 cursor-pointer">

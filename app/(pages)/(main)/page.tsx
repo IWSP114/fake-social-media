@@ -69,8 +69,8 @@ export default function Home() {
         {/* Story / Stories */}
         <div className="relative w-2/5 h-50 mb-2" >
 
-          <button className="absolute left-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg text-gray-600 z-99" onClick={scrollLeft}>Left</button>
-          <button className="absolute right-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg text-gray-600 z-99" onClick={scrollRight}>Right</button>
+          <button className="absolute left-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg font-bold text-gray-500 z-99" onClick={scrollLeft}>{"<"}</button>
+          <button className="absolute right-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg font-bold text-gray-500 z-99" onClick={scrollRight}>{">"}</button>
 
           <div className="flex items-center max-w-full h-full gap-2 overflow-x-hidden" ref={scrollRef} style={{ scrollBehavior: "smooth" }}>
             {/* Post Story */}
