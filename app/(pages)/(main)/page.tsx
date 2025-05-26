@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useRef } from 'react';
-import UserIcon from "../../../assert/MainPage/user-icon.png"
+import UserIcon from "../../../assest/MainPage/user-icon.png"
 
 import { LeftSideBar } from "./leftSideBar"
 import { RightSideBar } from "./rightSideBar"

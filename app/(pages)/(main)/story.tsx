@@ -1,5 +1,5 @@
-import ForestImg from "../../../assert/MainPage/forest.png"
-import UserIcon from "../../../assert/MainPage/user-icon.png"
+import ForestImg from "../../../assest/MainPage/forest.png"
+import UserIcon from "../../../assest/MainPage/user-icon.png"
 import Image from "next/image";
 
 export function Story() {

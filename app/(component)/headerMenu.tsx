@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
-import StarIcon from '../../assert/star-icon.png'
+import StarIcon from '../../assest/star-icon.png'
 
 function HeaderMenu({ visable }: { visable: boolean }) {
   return (

@@ -1,10 +1,10 @@
 
-import OptionsIcon from "../../../assert/FriendsPage/options-icon.png";
-import FriendsIcon from "../../../assert/FriendsPage/friends-icon.png";
-import AllFriendsIcon from "../../../assert/FriendsPage/all-friends-icon.png";
-import FriendsSuggestIcon from "../../../assert/FriendsPage/friends-suggest-icon.png";
-import FriendsInviteIcon from "../../../assert/FriendsPage/friends-invite-icon.png";
-import GiftIcon from "../../../assert/FriendsPage/gift-icon.png";
+import OptionsIcon from "../../../assest/FriendsPage/options-icon.png";
+import FriendsIcon from "../../../assest/FriendsPage/friends-icon.png";
+import AllFriendsIcon from "../../../assest/FriendsPage/all-friends-icon.png";
+import FriendsSuggestIcon from "../../../assest/FriendsPage/friends-suggest-icon.png";
+import FriendsInviteIcon from "../../../assest/FriendsPage/friends-invite-icon.png";
+import GiftIcon from "../../../assest/FriendsPage/gift-icon.png";
 import Image from "next/image"
 
 

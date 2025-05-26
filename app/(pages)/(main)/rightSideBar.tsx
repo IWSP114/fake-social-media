@@ -1,6 +1,6 @@
-import SearchIcon from "../../../assert/MainPage/search-icon.png"
-import AddIcon from "../../../assert/MainPage/add-icon.png"
-import UserIcon from "../../../assert/MainPage/user-icon.png"
+import SearchIcon from "../../../assest/MainPage/search-icon.png"
+import AddIcon from "../../../assest/MainPage/add-icon.png"
+import UserIcon from "../../../assest/MainPage/user-icon.png"
 import Image from "next/image"
 
 export function RightSideBar() {

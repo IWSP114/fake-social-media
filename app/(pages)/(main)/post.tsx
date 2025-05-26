@@ -1,4 +1,4 @@
-import UserIcon from "../../../assert/MainPage/user-icon.png"
+import UserIcon from "../../../assest/MainPage/user-icon.png"
 import Image from "next/image"
 
 export function Post({ username, message } : { username: string, message: string }) {

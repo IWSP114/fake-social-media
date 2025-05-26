@@ -1,11 +1,11 @@
 "use client";
 
 import { usePathname } from 'next/navigation';
-import AppIcon from '../../assert/header-icon.png'
-import UserIcon from '../../assert/discord-logo.png'
-import NineSquaresIcon from '../../assert/nine-squares.svg'
-import MessengerIcon from '../../assert/Messenger.svg'
-import BellIcon from '../../assert/Bell.svg'
+import AppIcon from '../../assest/header-icon.png'
+import UserIcon from '../../assest/discord-logo.png'
+import NineSquaresIcon from '../../assest/nine-squares.svg'
+import MessengerIcon from '../../assest/Messenger.svg'
+import BellIcon from '../../assest/Bell.svg'
 import Image from 'next/image'
 import Link from 'next/link';
 import { JSX, useEffect, useRef, useState } from 'react';

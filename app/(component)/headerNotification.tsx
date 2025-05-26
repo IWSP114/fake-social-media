@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
-import TextCloud from '../../assert/cloud-icon.png'
+import TextCloud from '../../assest/cloud-icon.png'
 
 function HeaderNotification({ visable }: { visable: boolean }) {
   return (
