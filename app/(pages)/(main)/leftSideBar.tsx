@@ -8,6 +8,7 @@ import MessengerIcon from "../../../assest/MainPage/messenger-icon.png"
 import MoreIcon from "../../../assest/MainPage/more-icon.png"
 import ThreadsIcon from "../../../assest/MainPage/threads-icon.png"
 import Image from "next/image"
+import Link from "next/link"
 
 
 export function LeftSideBar() {
@@ -29,6 +30,7 @@ export function LeftSideBar() {
           <h3 className="mx-2 font-bold">User</h3>
         </div>
 
+        <Link href="/friends">
         <div className="flex items-center hover:bg-gray-300 px-4 py-2 rounded-lg cursor-pointer">
           <div className="rounded-full w-10 h-10 p-2">
             <Image
@@ -40,9 +42,11 @@ export function LeftSideBar() {
                 objectFit: 'contain'
               }} />
           </div>
+          
 
           <h3 className="mx-2 font-bold">Friends</h3>
         </div>
+        </Link>
 
         <div className="flex items-center hover:bg-gray-300 px-4 py-2 rounded-lg cursor-pointer">
           <div className="rounded-full w-10 h-10 p-2">

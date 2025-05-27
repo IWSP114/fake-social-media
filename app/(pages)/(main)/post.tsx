@@ -1,9 +1,11 @@
 import UserIcon from "../../../assest/MainPage/user-icon.png"
+import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
+import type { Post } from "./postType"
 import Image from "next/image"
 
-export function Post({ username, message } : { username: string, message: string }) {
+export function Post({ username, message, picture } : Post) {
   return (
-    <div className="w-2/5 border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
+    <div className="min-w-100 max-w-2/5 border-gray-100 border-1 border-solid rounded-xl py-2 bg-white shadow-lg mb-4">
           <div className="flex flex-col">
             {/* Post Header */}
             <div className="flex justify-between p-2">
@@ -31,9 +33,20 @@ export function Post({ username, message } : { username: string, message: string
             </div>
 
             {/* Post Body */}
-            <div className="p-2 font-sans select-text break-normal">
-              {message}
-              Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! 
+            <div className="h-auto py-2 font-sans select-text break-normal">
+              {/* Post Text */}
+              <p className="px-2">{message}</p>
+              {/* Post Pciture */}
+              {picture && 
+              <div className="w-full aspect-square relative border-gray-600 border-1 border-solid">
+                  <Image
+                    src={PostPicture1}
+                    alt="User Icon"
+                    fill
+                    className="object-cover"
+                  />
+              </div>
+              }
             </div>
 
             {/* Post Footer */}

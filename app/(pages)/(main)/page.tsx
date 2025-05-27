@@ -10,6 +10,8 @@ import { PostStory } from "./postStory";
 import { Story } from "./story";
 import Image from "next/image";
 
+import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
+
 export default function Home() {
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -28,14 +30,14 @@ export default function Home() {
 
 
   return (
-    <div className="flex w-screen min-h-screen z-0">
+    <div className="flex w-full min-h-screen z-0">
       {/* Left side */}
       <LeftSideBar />
 
       {/* Center */}
       <div className="flex-1 flex flex-col items-center py-4 min-w-0">
         {/* User Post Head */}
-        <div className="w-full max-w-2/5 mx-auto border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
+        <div className="w-full min-w-100 max-w-2/5 mx-auto border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
           {/* User Icon */}
           <div className="flex gap-2 py-2 border-gray-200 border-b-1 border-solid">
             <div className="relative rounded-full w-10 h-10 overflow-hidden">
@@ -67,7 +69,7 @@ export default function Home() {
         </div>
 
         {/* Story / Stories */}
-        <div className="relative w-2/5 h-50 mb-2" >
+        <div className="relative min-w-100 max-w-2/5 h-50 mb-2" >
 
           <button className="absolute left-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg font-bold text-gray-500 z-99" onClick={scrollLeft}>{"<"}</button>
           <button className="absolute right-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg font-bold text-gray-500 z-99" onClick={scrollRight}>{">"}</button>
@@ -90,11 +92,11 @@ export default function Home() {
         </div>
 
         {/* Posts */}
-        <Post username={"User"} message={"Hello123"} />
-        <Post username={"Peter"} message={"Hello123"} />
-        <Post username={"Jacky"} message={"Hello123"} />
-        <Post username={"Jason"} message={"Hello123"} />
-        <Post username={"JoJo"} message={"Hello123"} />
+        <Post username={"CosmicVibes"} message={"Just realized that coffee is my spirit animal ☕️✨ Who else runs on caffeine and good vibes? #MondayMood #CoffeeLover"} picture={PostPicture1} />
+        <Post username={"UrbanEchoes"} message={"Every day is a new chance to chase your dreams and rewrite your story. Don’t wait for the perfect moment—make this moment perfect! 💫 #Motivation #KeepGoing"} />
+        <Post username={"FrostFlare"} message={"If you could travel anywhere in the world right now, where would you go? 🌍✈️ Drop your dream destination below! #Wanderlust #TravelGoals"} />
+        <Post username={"CosmicCraze"} message={"Feeling grateful for the little things today — a warm cup of tea, a good book, and some quiet time. What’s one small thing that made you smile today? 😊 #Gratitude #SimpleJoys"} />
+        <Post username={"UrbanMystic"} message={"Did you know? Octopuses have three hearts and blue blood! Nature is wild. 🐙💙 #FunFactFriday #NatureLovers"} />
       </div>
 
       {/* Right side */}
