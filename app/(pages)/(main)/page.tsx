@@ -1,36 +1,37 @@
 "use client"
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import UserIcon from "../../../assest/MainPage/user-icon.png"
 
 import { LeftSideBar } from "./leftSideBar"
-import { RightSideBar } from "./rightSideBar"
+import { RightSideBar } from "./(rightSideBar)/rightSideBar"
 import { Post } from "./post";
 import { PostStory } from "./postStory";
 import { Story } from "./story";
+import { DialogComponent } from './dialog';
 import Image from "next/image";
 
 import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
 
 export default function Home() {
-
+  const [isOpen, setIsOpen] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
-    if(scrollRef.current) {
+    if (scrollRef.current) {
       scrollRef.current.scrollLeft -= 200;
     }
   }
 
   const scrollRight = () => {
-    if(scrollRef.current) {
+    if (scrollRef.current) {
       scrollRef.current.scrollLeft += 200;
     }
   }
 
 
   return (
-    <div className="flex w-full min-h-screen z-0">
+    <div className="flex w-full min-h-screen z-0 overflow-y-scroll">
       {/* Left side */}
       <LeftSideBar />
 
@@ -48,7 +49,9 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <input className="inline bg-gray-200 hover:bg-gray-300 rounded-2xl flex-grow px-2" type="text" placeholder="What are you thinking?" />
+            
+            <div onClick={() => setIsOpen(true)} className="bg-gray-200 hover:bg-gray-300 rounded-2xl flex-grow px-2 text-gray-500 cursor-pointer flex items-center" >What are you thinking?</div>
+            <DialogComponent isOpen={isOpen} setIsOpen={setIsOpen}/>
           </div>
 
           <div className="flex gap-2 items-center mt-2">
@@ -87,7 +90,7 @@ export default function Home() {
             <Story />
             <Story />
           </div>
-          
+
 
         </div>
 
