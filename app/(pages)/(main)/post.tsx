@@ -3,7 +3,7 @@ import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
 import type { Post } from "./postType"
 import Image from "next/image"
 
-export function Post({ username, message, picture } : Post) {
+export function Post({ username, message, likes, comments, shares, picture } : Post) {
   return (
     <div className="min-w-100 max-w-2/5 border-gray-100 border-1 border-solid rounded-xl py-2 bg-white shadow-lg mb-4">
           <div className="flex flex-col">
@@ -51,11 +51,11 @@ export function Post({ username, message, picture } : Post) {
 
             {/* Post Footer */}
             <div className="flex justify-between p-2 border-gray-300 border-b-1 border-solid">
-              <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">100 Likes</div>
+              <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{likes} Likes</div>
 
               <div className="flex gap-2">
-                <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">3 Comments</div>
-                <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">2 Shares</div>
+                <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{comments} Comments</div>
+                <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{shares} Shares</div>
               </div>
             </div>
 

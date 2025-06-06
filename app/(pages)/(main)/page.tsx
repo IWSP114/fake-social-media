@@ -95,11 +95,11 @@ export default function Home() {
         </div>
 
         {/* Posts */}
-        <Post username={"CosmicVibes"} message={"Just realized that coffee is my spirit animal ☕️✨ Who else runs on caffeine and good vibes? #MondayMood #CoffeeLover"} picture={PostPicture1} />
-        <Post username={"UrbanEchoes"} message={"Every day is a new chance to chase your dreams and rewrite your story. Don’t wait for the perfect moment—make this moment perfect! 💫 #Motivation #KeepGoing"} />
-        <Post username={"FrostFlare"} message={"If you could travel anywhere in the world right now, where would you go? 🌍✈️ Drop your dream destination below! #Wanderlust #TravelGoals"} />
-        <Post username={"CosmicCraze"} message={"Feeling grateful for the little things today — a warm cup of tea, a good book, and some quiet time. What’s one small thing that made you smile today? 😊 #Gratitude #SimpleJoys"} />
-        <Post username={"UrbanMystic"} message={"Did you know? Octopuses have three hearts and blue blood! Nature is wild. 🐙💙 #FunFactFriday #NatureLovers"} />
+        <Post username={"CosmicVibes"} message={"Just realized that coffee is my spirit animal ☕️✨ Who else runs on caffeine and good vibes? #MondayMood #CoffeeLover"} likes={100} comments={38} shares={58} picture={PostPicture1} />
+        <Post username={"UrbanEchoes"} message={"Every day is a new chance to chase your dreams and rewrite your story. Don’t wait for the perfect moment—make this moment perfect! 💫 #Motivation #KeepGoing"} likes={20} comments={13} shares={4} />
+        <Post username={"FrostFlare"} message={"If you could travel anywhere in the world right now, where would you go? 🌍✈️ Drop your dream destination below! #Wanderlust #TravelGoals"} likes={3} comments={2} shares={3}/>
+        <Post username={"CosmicCraze"} message={"Feeling grateful for the little things today — a warm cup of tea, a good book, and some quiet time. What’s one small thing that made you smile today? 😊 #Gratitude #SimpleJoys"} likes={40} comments={25} shares={2} />
+        <Post username={"UrbanMystic"} message={"Did you know? Octopuses have three hearts and blue blood! Nature is wild. 🐙💙 #FunFactFriday #NatureLovers"} likes={0} comments={0} shares={0}/>
       </div>
 
       {/* Right side */}
