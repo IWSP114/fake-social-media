@@ -4,7 +4,7 @@ export function FriendOptions({ visable }: { visable: boolean }) {
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
-    <div className={`min-w-auto w-full top-10 bg-slate-500 bg-white rounded-xl shadow-xl z-99 px-4 py-4 ${visable ? "absolute" : "hidden"}`}>
+    <div className={`min-w-auto w-full top-10  bg-white rounded-xl shadow-xl z-99 px-4 py-4 ${visable ? "absolute" : "hidden"}`}>
 
       <div className="border-slate-300 border-b-1 border-solid pb-2">
         <h1 className="font-bold text-lg text-left">Notification Settings</h1>
