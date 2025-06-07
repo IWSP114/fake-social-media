@@ -7,22 +7,27 @@ import Image from 'next/image'
 export function FriendMayKnow() {
 
   const [width, setWidth] = useState<number>(0);
-  
-    useEffect(() => {
-      // This runs only in the browser
-      function handleWindowSizeChange() {
-        setWidth(window.innerWidth);
-      }
-      // Set initial width
-      handleWindowSizeChange();
-      window.addEventListener('resize', handleWindowSizeChange);
-      return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-      }
-    }, []);
-  
-    const isMobile = width <= 768;
-    if (isMobile) {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+    function handleWindowSizeChange() {
+      setWidth(window.innerWidth);
+    }
+    handleWindowSizeChange();
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
+
+  if (!hasMounted) {
+    // Don't render anything on the server
+    return null;
+  }
+
+  const isMobile = width <= 768;
+  if (isMobile) {
     return (
       <div className="flex flex-row h-25 w-full flex-shrink-0 min-w-32 rounded-xl shadow-xl">
         {/* User Data */}
@@ -41,13 +46,13 @@ export function FriendMayKnow() {
 
           {/* Username Container */}
           <div className="h-full flex flex-col pt-4 px-2 grow">
-              <h1 className="font-semibold text-base cursor-pointer hover:underline">User</h1>
-              <h2 className="font-light text-sm text-slate-600">1 Mutual Friends</h2>
-              {/* Buttons container */}
-              <div className="flex flex-row w-full">
-                <button className="grow bg-sky-100 hover:bg-gray-200 text-blue-500 cursor-pointer px-3 py-1 rounded-lg font-bold mx-0.5">Add Friend</button>
-                <button className="grow bg-slate-200 hover:bg-slate-300 text-black cursor-pointer px-3 py-1 rounded-lg font-bold mx-0.5">Remove</button>
-              </div>
+            <h1 className="font-semibold text-base cursor-pointer hover:underline">User</h1>
+            <h2 className="font-light text-sm text-slate-600">1 Mutual Friends</h2>
+            {/* Buttons container */}
+            <div className="flex flex-row w-full">
+              <button className="grow bg-sky-100 hover:bg-gray-200 text-blue-500 cursor-pointer px-3 py-1 rounded-lg font-bold mx-0.5">Add Friend</button>
+              <button className="grow bg-slate-200 hover:bg-slate-300 text-black cursor-pointer px-3 py-1 rounded-lg font-bold mx-0.5">Remove</button>
+            </div>
           </div>
         </div>
       </div>

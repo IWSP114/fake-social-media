@@ -7,13 +7,13 @@ import Image from 'next/image'
 export function FriendInvitation() {
 
   const [width, setWidth] = useState<number>(0);
+  const [hasMounted, setHasMounted] = useState(false);
 
-  useEffect(() => {
-    // This runs only in the browser
+   useEffect(() => {
+    setHasMounted(true);
     function handleWindowSizeChange() {
       setWidth(window.innerWidth);
     }
-    // Set initial width
     handleWindowSizeChange();
     window.addEventListener('resize', handleWindowSizeChange);
     return () => {
@@ -21,6 +21,10 @@ export function FriendInvitation() {
     }
   }, []);
 
+  if (!hasMounted) {
+    // Don't render anything on the server
+    return null;
+  }
   const isMobile = width <= 768;
   if (isMobile) {
     return (
