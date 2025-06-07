@@ -4,8 +4,16 @@ import UserIcon from "../../../assest/MainPage/user-icon.png"
 import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
 import type { Post } from "./postType"
 import Image from "next/image"
+import { useState } from "react"
 
 export function Post({ username, message, likes, comments, shares, picture } : Post) {
+  const [isLiked,  setIsLiked] = useState(false);
+
+  function handleLike() {
+    setIsLiked(prev => !prev);
+    console.log(isLiked);
+  }
+
   return (
     <div className="sm:min-w-100 sm:max-w-2/5 border-gray-100 border-1 border-solid rounded-xl py-2 bg-white shadow-lg mb-4">
           <div className="flex flex-col">
@@ -53,7 +61,7 @@ export function Post({ username, message, likes, comments, shares, picture } : P
 
             {/* Post Footer */}
             <div className="flex justify-between p-2 border-gray-300 border-b-1 border-solid">
-              <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{likes} Likes</div>
+              <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{isLiked ? (`You and other ${likes} people liked`) : (`${likes} likes`)}</div>
 
               <div className="flex gap-2">
                 <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{comments} Comments</div>
@@ -62,7 +70,7 @@ export function Post({ username, message, likes, comments, shares, picture } : P
             </div>
 
             <div className="flex gap-2 items-center mt-2">
-              <div className="flex flex-1 font-semibold text-gray-600 tracking-tight justify-center items-center rounded-sm hover:bg-gray-300 cursor-pointer">
+              <div onClick={() => handleLike()} className={`flex flex-1 font-semibold ${isLiked ? "text-blue-600" : "text-gray-600" } tracking-tight justify-center items-center rounded-sm hover:bg-gray-300 cursor-pointer`}>
                 Like
               </div>
 
