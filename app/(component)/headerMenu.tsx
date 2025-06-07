@@ -1,6 +1,7 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
 import StarIcon from '../../assest/star-icon.png'
+import Link from 'next/link'
 
 function HeaderMenu({ visable }: { visable: boolean }) {
   return (
@@ -9,37 +10,47 @@ function HeaderMenu({ visable }: { visable: boolean }) {
       <div className="flex gap-4">
 
         {/* Social Container*/}
-        <div className="bg-white w-19/20 sm:w-auto flex flex-col flex-nowrap gap-4 p-2 rounded-xl whitespace-nowrap pr-4 shadow-xl overflow-clip">
+        <div className="bg-white w-19/20 sm:w-auto flex flex-col flex-nowrap gap-4 p-2 rounded-xl sm:whitespace-nowrap pr-4 shadow-xl">
           <h3 className="text-xl font-bold ml-2">Social</h3>
 
-          <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
-            <h3 className="text-lg font-semibold">Event</h3>
-            <p className="text-sm">Plan or find things to do online and nearby.</p>
-          </div>
+          <Link href="/">
+            <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
+              <h3 className="text-lg font-semibold">Home</h3>
+              <p className="text-sm break-words">Plan or find things to do online and nearby on Home.</p>
+            </div>
+          </Link>
 
-          <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
-            <h3 className="text-lg font-semibold">Friends</h3>
-            <p className="text-sm">Search for friends or people you may know.</p>
-          </div>
+          <Link href="/friends">
+            <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
+              <h3 className="text-lg font-semibold">Friends</h3>
+              <p className="text-sm break-words">Search for friends or people you may know.</p>
+            </div>
+          </Link>
 
-          <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
-            <h3 className="text-lg font-semibold">Birthday</h3>
-            <p className="text-sm">Send birthday wishes to friends and family.</p>
-          </div>
+          <Link href="/games">
+            <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
+              <h3 className="text-lg font-semibold">Games</h3>
+              <p className="text-sm break-words">Play mini games on our platform.</p>
+            </div>
+          </Link>
 
-          <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
-            <h3 className="text-lg font-semibold">Groups</h3>
-            <p className="text-sm">Connect with like-minded people.</p>
-          </div>
+          <Link href="/market-place">
+            <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
+              <h3 className="text-lg font-semibold">Market</h3>
+              <p className="text-sm break-words">Take a look at the community market.</p>
+            </div>
+          </Link>
 
-          <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
-            <h3 className="text-lg font-semibold">News Feed</h3>
-            <p className="text-sm">View the latest posts from friends, groups, pages and other captains.</p>
-          </div>
+          <Link href="/video">
+            <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
+              <h3 className="text-lg font-semibold">Video</h3>
+              <p className="text-sm break-words">View the latest video from friends, groups, pages and other captains.</p>
+            </div>
+          </Link>
 
           <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
             <h3 className="text-lg font-semibold">Pages</h3>
-            <p className="text-sm">Discover and connect with businesses on social media.</p>
+            <p className="text-sm break-words">Discover and connect with businesses on social media.</p>
           </div>
 
         </div>
