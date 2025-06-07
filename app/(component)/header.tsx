@@ -88,6 +88,12 @@ export function Header(): JSX.Element {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [showMenu]);
 
+  useEffect(() => {
+    setShowMenu(false);
+    setShowMessenger(false);
+    setShowNotification(false);
+}, [pathname]);
+
   return (
     <div className="fixed top-0 right-0 left-0 bg-white flex flex-row justify-between h-16 shadow-lg z-99">
       <div className="ml-3 flex flex-nowrap items-center gap-3 h-full w-auto">
