@@ -6,12 +6,15 @@ import Image from 'next/image'
 
 export function FriendInvitation() {
 
-  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [width, setWidth] = useState<number>(0);
 
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
   useEffect(() => {
+    // This runs only in the browser
+    function handleWindowSizeChange() {
+      setWidth(window.innerWidth);
+    }
+    // Set initial width
+    handleWindowSizeChange();
     window.addEventListener('resize', handleWindowSizeChange);
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
