@@ -48,7 +48,7 @@ export const DialogComponent = memo(function DialogComponent({ isOpen, setIsOpen
               onChange={(e) => setTexts(e.target.value)}
               placeholder="What's on your mind?"
               className={clsx(
-                'mt-3 block w-full resize-none rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-black',
+                'mt-3 block w-full resize-none rounded-lg border-none bg-white/5 px-3 py-1.5 text-base/6 text-black',
                 'focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25',
               )}
               rows={5}

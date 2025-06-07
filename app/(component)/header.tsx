@@ -103,7 +103,7 @@ export function Header(): JSX.Element {
           />
         </Link>
 
-        <input className="h-1/2 bg-slate-200 rounded-2xl p-5" type='text' placeholder="Search..." />
+        <input className="h-1/2 bg-slate-200 rounded-2xl p-5 hidden sm:block" type='text' placeholder="Search..." />
       </div>
 
       <ul className="hidden md:flex md:items-center md:flex-nowrap my-1 mr-20">

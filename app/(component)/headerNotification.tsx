@@ -4,7 +4,7 @@ import TextCloud from '../../assest/cloud-icon.png'
 
 function HeaderNotification({ visable }: { visable: boolean }) {
   return (
-    <div className={`z-99 bg-white fixed top-16 right-5 h-full p-4 pr-6 min-w-100 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
+    <div className={`z-99 bg-white w-screen sm:w-auto left-0 right-0 sm:left-auto sm:top-16 sm:right-5 sm:h-full p-4 pr-6 min-w-100 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
       <h3 className="font-bold text-2xl">Notification</h3>
 
       <div className="flex items-center justify-start gap-4 pt-4">

@@ -38,7 +38,7 @@ export default function Home() {
       {/* Center */}
       <div className="flex-1 flex flex-col items-center py-4 min-w-0">
         {/* User Post Head */}
-        <div className="w-full min-w-100 max-w-2/5 mx-auto border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
+        <div className="w-full sm:min-w-100 sm:max-w-2/5 mx-auto border-gray-100 border-1 border-solid rounded-lg p-2 bg-white shadow-lg mb-4">
           {/* User Icon */}
           <div className="flex gap-2 py-2 border-gray-200 border-b-1 border-solid">
             <div className="relative rounded-full w-10 h-10 overflow-hidden">
@@ -72,10 +72,10 @@ export default function Home() {
         </div>
 
         {/* Story / Stories */}
-        <div className="relative min-w-100 max-w-2/5 h-50 mb-2" >
+        <div className="relative w-full sm:min-w-100 sm:max-w-2/5 h-50 mb-2" >
 
-          <button className="absolute left-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg font-bold text-gray-500 z-99" onClick={scrollLeft}>{"<"}</button>
-          <button className="absolute right-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg font-bold text-gray-500 z-99" onClick={scrollRight}>{">"}</button>
+          <button className="absolute left-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg font-bold text-gray-500 z-10" onClick={scrollLeft}>{"<"}</button>
+          <button className="absolute right-4 top-1/2 bg-white rounded-lg p-2 cursor-pointer hover:opacity-80 shadow-lg font-bold text-gray-500 z-10" onClick={scrollRight}>{">"}</button>
 
           <div className="flex items-center max-w-full h-full gap-2 overflow-x-hidden" ref={scrollRef} style={{ scrollBehavior: "smooth" }}>
             {/* Post Story */}

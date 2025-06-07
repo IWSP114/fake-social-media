@@ -4,11 +4,12 @@ import StarIcon from '../../assest/star-icon.png'
 
 function HeaderMenu({ visable }: { visable: boolean }) {
   return (
-    <div className={`z-99 bg-slate-100 fixed top-16 right-5 p-2 pr-10 rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
+    <div className={`z-99 bg-slate-100 w-screen sm:w-auto left-0 right-0 sm:left-auto sm:top-16 sm:right-5 p-2 sm:pr-10 break-all rounded-xl shadow-xl ${visable ? "fixed" : "hidden"}`}>
       <h3 className="font-bold text-2xl m-2">Menu</h3>
       <div className="flex gap-4">
 
-        <div className="bg-white flex flex-col flex-nowrap gap-4 p-2 rounded-xl whitespace-nowrap pr-4 shadow-xl">
+        {/* Social Container*/}
+        <div className="bg-white w-19/20 sm:w-auto flex flex-col flex-nowrap gap-4 p-2 rounded-xl whitespace-nowrap pr-4 shadow-xl overflow-clip">
           <h3 className="text-xl font-bold ml-2">Social</h3>
 
           <div className="px-4 py-2 m-0 rounded-lg hover:bg-slate-100 cursor-pointer">
@@ -43,7 +44,7 @@ function HeaderMenu({ visable }: { visable: boolean }) {
 
         </div>
 
-        <div className="bg-white flex flex-col flex-nowrap gap-4 px-2 rounded-xl whitespace-nowrap pr-4 pt-6 shadow-xl">
+        <div className="bg-white hidden sm:flex flex-col flex-nowrap gap-4 px-2 rounded-xl whitespace-nowrap pr-4 pt-6 shadow-xl">
           <div className="border-slate-500 border-b-1 border-solid px-2">
             <h3 className="text-xl font-bold">Establish</h3>
 
