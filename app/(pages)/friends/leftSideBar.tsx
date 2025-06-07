@@ -1,3 +1,5 @@
+"use client"
+
 import OptionsIcon from "../../../assest/FriendsPage/options-icon.png";
 import FriendsIcon from "../../../assest/FriendsPage/friends-icon.png";
 import AllFriendsIcon from "../../../assest/FriendsPage/all-friends-icon.png";

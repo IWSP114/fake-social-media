@@ -1,3 +1,5 @@
+"use client"
+
 import React, { memo } from 'react'
 import Image from 'next/image'
 import StarIcon from '../../assest/star-icon.png'

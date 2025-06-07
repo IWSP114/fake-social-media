@@ -1,3 +1,5 @@
+"use client"
+
 import ForestImg from "../../../assest/MainPage/forest.png"
 import UserIcon from "../../../assest/MainPage/user-icon.png"
 import Image from "next/image";

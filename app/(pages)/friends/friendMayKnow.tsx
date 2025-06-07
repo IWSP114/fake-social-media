@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from 'react'
 import UserIcon from "../../../assest/MainPage/user-icon.png"
 import Image from 'next/image'

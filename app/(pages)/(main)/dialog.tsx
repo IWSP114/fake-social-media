@@ -1,3 +1,5 @@
+"use client"
+
 import { Dialog, DialogPanel, DialogTitle, Textarea } from '@headlessui/react'
 import { memo } from 'react';
 import { useState } from 'react';

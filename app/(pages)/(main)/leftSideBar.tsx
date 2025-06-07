@@ -1,3 +1,5 @@
+"use client"
+
 import UserIcon from "../../../assest/MainPage/user-icon.png"
 import FriendsIcon from "../../../assest/MainPage/friends-icon.png"
 import BookmarkIcon from "../../../assest/MainPage/bookmark-icon.png"

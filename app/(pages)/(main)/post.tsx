@@ -1,3 +1,5 @@
+"use client"
+
 import UserIcon from "../../../assest/MainPage/user-icon.png"
 import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
 import type { Post } from "./postType"

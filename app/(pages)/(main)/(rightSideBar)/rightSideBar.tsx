@@ -1,3 +1,5 @@
+"use client"
+
 import SearchIcon from "../../../../assest/MainPage/search-icon.png"
 import AddIcon from "../../../../assest/MainPage/add-icon.png"
 import Image from "next/image"
