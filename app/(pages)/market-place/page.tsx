@@ -23,7 +23,7 @@ export default function MarketPlace() {
           </div>
 
           {/* Today's Picks Content */}
-          <div className="flex gap-2 flex-wrap flex-col sm:flex-row">
+          <div className="flex gap-2 flex-wrap sm:flex-row">
             {/* Today's Picks Items */}
             {TodayPick.map(item => (
               <ProductItems key={item.name} name={item.name} price={item.price} description={item.description} image={item.image} />
@@ -42,7 +42,7 @@ export default function MarketPlace() {
           </div>
 
           {/* Today's Picks Content */}
-          <div className="flex gap-2 flex-wrap flex-col sm:flex-row">
+          <div className="flex gap-2 flex-wrap sm:flex-row">
             {/* Today's Picks Items */}
             {Sport.map(item => (
               <ProductItems key={item.name} name={item.name} price={item.price} description={item.description} image={item.image} />
@@ -61,7 +61,7 @@ export default function MarketPlace() {
           </div>
 
           {/* Today's Picks Content */}
-          <div className="flex gap-2 flex-wrap flex-col sm:flex-row">
+          <div className="flex gap-2 flex-wrap sm:flex-row">
             {/* Today's Picks Items */}
             {Gardening.map(item => (
               <ProductItems key={item.name} name={item.name} price={item.price} description={item.description} image={item.image} />
@@ -80,7 +80,7 @@ export default function MarketPlace() {
           </div>
 
           {/* Today's Picks Content */}
-          <div className="flex gap-2 flex-wrap flex-col sm:flex-row">
+          <div className="flex gap-2 flex-wrap sm:flex-row">
             {/* Today's Picks Items */}
             {Music.map(item => (
               <ProductItems key={item.name} name={item.name} price={item.price} description={item.description} image={item.image} />
@@ -98,7 +98,7 @@ export default function MarketPlace() {
             <h1 className="font-semibold text-normal text-blue-500 p-2 rounded-sm hover:bg-gray-200">View All</h1>
           </div>
 
-          <div className="flex gap-2 flex-wrap flex-col sm:flex-row">
+          <div className="flex gap-2 flex-wrap sm:flex-row">
             {/* Today's Picks Items */}
             {Toy.map(item => (
               <ProductItems key={item.name} name={item.name} price={item.price} description={item.description} image={item.image} />

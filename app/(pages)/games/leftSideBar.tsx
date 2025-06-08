@@ -7,19 +7,19 @@ import { GameOptions } from "./gameOptions";
 
 {/* Games page left side bar */ }
 export function LeftSideBar() {
-  const [showMarketplaceOptions, setShowMarketplaceOptions] = useState<boolean>(false);
+  const [showGamingOptions, setShowGamingOptions] = useState<boolean>(false);
 
   return (
     <div className="h-full min-w-1/5 hidden md:flex flex-col justify-between px-2 py-4 border-gray-300 border-r-1 border-solid bg-white overflow-y-auto">
       <div className="flex flex-col">
         <div className="relative flex justify-between items-center px-2">
           <h1 className="my-2 font-bold font-sans text-2xl">Gaming</h1>
-          <button onClick={() => setShowMarketplaceOptions((s => !s))} className={`relative rounded-full ${showMarketplaceOptions ? "bg-sky-300" : "bg-slate-200"} hover:bg-gray-400 active:scale-98 w-8 h-8 p-2 cursor-pointer`}>
-            {showMarketplaceOptions && <Settings color="#ffffff" strokeWidth={3} className="w-full h-full text-gray-700" />}
-            {!showMarketplaceOptions && <Settings strokeWidth={3} className="w-full h-full text-gray-700" />}
+          <button onClick={() => setShowGamingOptions((s => !s))} className={`relative rounded-full ${showGamingOptions ? "bg-sky-300" : "bg-slate-200"} hover:bg-gray-400 active:scale-98 w-8 h-8 p-2 cursor-pointer`}>
+            {showGamingOptions && <Settings color="#ffffff" strokeWidth={3} className="w-full h-full text-gray-700" />}
+            {!showGamingOptions && <Settings strokeWidth={3} className="w-full h-full text-gray-700" />}
           </button>
           {/* Gaming option */}
-          <GameOptions visable={showMarketplaceOptions} />
+          <GameOptions visable={showGamingOptions} />
         </div>
 
         {/* Gaming Options Container*/}
