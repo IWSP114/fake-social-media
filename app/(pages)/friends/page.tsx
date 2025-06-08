@@ -15,7 +15,7 @@ export default function Friends() {
 
       <div className="flex-1 flex flex-col items-center p-4 min-w-0">
         {/* Friend Invitation */}
-        <div className="w-full flex flex-col sm:gap-4 sm:p-4 pb-4 order-slate-100 border-b-1 border-solid">
+        <div className="w-full flex flex-col sm:gap-4 sm:p-4 pb-4 border-slate-300 border-b-1 border-solid">
           {/* Friend Invitation Header */}
           <div className="flex justify-between items-center tracking-tight">
             <h1 className="font-semibold text-lg sm:font-bold sm:text-xl">Friend Invitation</h1>
