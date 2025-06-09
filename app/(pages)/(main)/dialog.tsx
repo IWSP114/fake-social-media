@@ -18,7 +18,7 @@ export const DialogComponent = memo(function DialogComponent({ isOpen, setIsOpen
 
   return (
     <>
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50 text-black">
         <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
         <div className="fixed inset-0 flex items-center justify-center">
           <DialogPanel className="bg-white py-2 rounded-xl shadow-xl w-full max-w-lg">

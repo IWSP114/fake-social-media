@@ -12,6 +12,7 @@ import { JSX, useEffect, useRef, useState } from 'react';
 import HeaderMenu from './headerMenu';
 import HeaderMessenger from './headerMessenger';
 import HeaderNotification from './headerNotification';
+import { Gamepad2, House, ShoppingBag, TvMinimalPlay, UsersRound } from 'lucide-react';
 
 export function Header(): JSX.Element {
   const pathname: string = usePathname();
@@ -112,12 +113,12 @@ export function Header(): JSX.Element {
         <input className="h-1/2 bg-slate-200 rounded-2xl p-5 hidden sm:block" type='text' placeholder="Search..." />
       </div>
 
-      <ul className="hidden md:flex md:items-center md:flex-nowrap my-1 mr-20">
-        <Link href="/" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isHome ? "border-blue-200 border-b-1 border-solid" : ""}`}><li>Home</li></Link>
-        <Link href="/friends" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isFriends ? "border-blue-200 border-b-1 border-solid" : ""}`}><li>Friends</li></Link>
-        <Link href="/video" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isVideo ? "border-blue-200 border-b-1 border-solid" : ""}`}><li>Video</li></Link>
-        <Link href="/market-place" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isMarket ? "border-blue-200 border-b-1 border-solid" : ""}`}><li>Market Place</li></Link>
-        <Link href="/games" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isGames ? "border-blue-200 border-b-1 border-solid" : ""}`}><li>Games</li></Link>
+      <ul className="hidden md:flex md:items-center md:justify-around md:flex-nowrap my-1 mr-20">
+        <Link href="/" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isHome ? "border-blue-600 border-b-2 border-solid" : ""}`}><li>{isHome ? <House color="#3b4bc9" /> : <House /> }</li></Link>
+        <Link href="/friends" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isFriends ? "border-blue-600 border-b-2 border-solid" : ""}`}><li>{isFriends ? <UsersRound color="#3b4bc9" /> : <UsersRound /> }</li></Link>
+        <Link href="/video" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isVideo ? "border-blue-600 border-b-2 border-solid" : ""}`}><li>{isVideo ? <TvMinimalPlay color="#3b4bc9" /> : <TvMinimalPlay /> }</li></Link>
+        <Link href="/market-place" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isMarket ? "border-blue-600 border-b-2 border-solid" : ""}`}><li>{isMarket ? <ShoppingBag color="#3b4bc9" /> : <ShoppingBag />}</li></Link>
+        <Link href="/games" className={`hover:bg-gray-200 h-full w-full flex justify-center items-center m-0 mx-1 px-7 rounded-md ${isGames ? "border-blue-600 border-b-2 border-solid" : ""}`}><li>{isGames ? <Gamepad2 color="#3b4bc9" /> : <Gamepad2 /> }</li></Link>
       </ul>
       
       <ul className="mr-3 flex items-center gap-2 flex-nowrap">

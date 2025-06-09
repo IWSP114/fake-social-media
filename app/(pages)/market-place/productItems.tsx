@@ -7,12 +7,12 @@ export function ProductItems({ name, price, description, image }: Product) {
   return (
     <div className="flex flex-col gap-2 h-65 w-40 sm:w-60 sm:h-80 hover:underline cursor-pointer">
       {/* Items Picture Container */}
-      <div className="flex-1 max-w-full max-h-60 rounded-lg relative ">
+      <div className="flex-1 max-w-full max-h-60 rounded-xl relative ">
         <Image
           src={image}
           alt="Item"
           fill
-          className="object-fill"
+          className="object-fill rounded-xl"
         />
       </div >
       {/* Items Details */}

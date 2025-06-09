@@ -2,6 +2,10 @@ import React from 'react'
 
 export default function Video() {
   return (
-    <div>Video Page</div>
+    <>
+      <title>Reels</title>
+      <div>Video Page</div>
+    </>
+    
   )
 }
