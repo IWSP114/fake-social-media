@@ -12,6 +12,7 @@ import { DialogComponent } from './dialog';
 import Image from "next/image";
 
 import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
+import { ImagePlus, SmilePlus, Video } from 'lucide-react';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
@@ -56,15 +57,15 @@ export default function Home() {
 
           <div className="flex gap-2 items-center mt-2">
             <div className="flex flex-1 justify-center items-center rounded-lg hover:bg-gray-300 py-2 cursor-pointer">
-              Lives
+              <Video color="#e33030" /><p className="mx-0.5 font-semibold text-sm text-gray-500">Lives</p>
             </div>
 
             <div className="flex flex-1 justify-center items-center rounded-lg hover:bg-gray-300 py-2 cursor-pointer">
-              Pictures / Videos
+              <ImagePlus color="#34e349" /><p className="mx-0.5 font-semibold text-sm text-gray-500">Pictures / Videos</p>
             </div>
 
             <div className="flex flex-1 justify-center items-center rounded-lg hover:bg-gray-300 py-2 cursor-pointer">
-              Feeling / Events
+              <SmilePlus color="#ebc42a" /><p className="mx-0.5 font-semibold text-sm text-gray-500">Feeling / Events</p>
             </div>
 
           </div>

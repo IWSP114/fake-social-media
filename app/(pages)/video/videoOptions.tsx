@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export function MarketplaceOptions({ visable }: { visable: boolean }) {
+export function VideoOptions({ visable }: { visable: boolean }) {
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
@@ -10,7 +10,7 @@ export function MarketplaceOptions({ visable }: { visable: boolean }) {
 
       <div className="border-slate-300 border-b-1 border-solid pb-2">
         <h1 className="font-bold text-lg text-left">Notification Settings</h1>
-        <p className="font-medium text-xs text-left text-slate-500">You can manage how you receive notifications about your markets&apos; latest updates.</p>
+        <p className="font-medium text-xs text-left text-slate-500">You can manage how you receive notifications about your videos&apos; latest updates.</p>
       </div>
 
       <div className="flex justify-between items-center py-4 px-2 hover:bg-slate-100 rounded-lg">
