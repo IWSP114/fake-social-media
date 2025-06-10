@@ -47,6 +47,7 @@ export default function Home() {
                 src={UserIcon}
                 alt="User Icon"
                 fill
+                sizes='40px'
                 className="object-cover"
               />
             </div>

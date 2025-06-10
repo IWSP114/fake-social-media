@@ -19,6 +19,7 @@ export function LeftSideBar() {
               src={UserIcon}
               alt="User Icon"
               fill
+              sizes="40px"
               className="object-cover"
             />
           </div>

@@ -12,6 +12,7 @@ export function ProductItems({ name, price, description, image }: Product) {
           src={image}
           alt="Item"
           fill
+          sizes="(min-width: 640px) 240px, 160px"
           className="object-fill rounded-xl"
         />
       </div >

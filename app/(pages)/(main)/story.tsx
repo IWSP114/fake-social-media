@@ -13,6 +13,7 @@ export function Story() {
           src={ForestImg}
           alt="Story Image"
           fill
+          sizes="128px"
         />
         
         <div className="absolute top-2 left-2 rounded-full bg-blue-600 p-1">
@@ -21,6 +22,7 @@ export function Story() {
               src={UserIcon}
               alt="User Icon"
               fill
+              sizes="32px"
               className="object-cover"
             />
           </div>

@@ -23,7 +23,7 @@ export default function Games() {
             </div>
 
             {/* Popular Games Content */}
-            <div className="flex gap-2 flex-wrap sm:flex-row">
+            <div className="grid grid-cols-2 md:flex gap-2 md:flex-wrap md:flex-row">
               {/* Popular Games Items */}
               {PopularGames.map(item => (
                 <GameItem key={item.name} name={item.name} players={item.players} image={item.image} />
@@ -41,7 +41,7 @@ export default function Games() {
             </div>
 
             {/* Your favorite picks Content */}
-            <div className="flex gap-2 flex-wrap sm:flex-row">
+            <div className="grid grid-cols-2 md:flex gap-2 md:flex-wrap md:flex-row">
               {/* Your favorite picks Items */}
               {YourFavouritePick.map(item => (
                 <GameItem key={item.name} name={item.name} players={item.players} category={item.category} image={item.image} />

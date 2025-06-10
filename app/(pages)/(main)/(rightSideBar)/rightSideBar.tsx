@@ -55,6 +55,7 @@ export function RightSideBar() {
                 src={AddIcon}
                 alt="Add Icon"
                 fill
+                sizes="40px"
                 className="object-cover"
               />
             </div>
