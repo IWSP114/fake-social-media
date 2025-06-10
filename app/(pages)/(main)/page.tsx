@@ -12,6 +12,7 @@ import { DialogComponent } from './dialog';
 import Image from "next/image";
 
 import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
+import { Stories } from './(rightSideBar)/storyList';
 import { ImagePlus, SmilePlus, Video } from 'lucide-react';
 
 export default function Home() {
@@ -83,14 +84,7 @@ export default function Home() {
             {/* Post Story */}
             <PostStory />
 
-            <Story />
-            <Story />
-            <Story />
-            <Story />
-            <Story />
-            <Story />
-            <Story />
-            <Story />
+            {Stories.map((story) => <Story key={story.name} name={story.name} image={story.image} />)}
           </div>
 
 
