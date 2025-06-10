@@ -5,9 +5,9 @@ import type { Product } from './itemList'
 
 export function ProductItems({ name, price, description, image }: Product) {
   return (
-    <div className="flex flex-col gap-2 h-65 w-40 sm:w-60 sm:h-80 hover:underline cursor-pointer">
+    <div className="flex flex-col gap-2 h-65 w-40 sm:w-60 sm:h-90 hover:underline cursor-pointer">
       {/* Items Picture Container */}
-      <div className="flex-1 max-w-full max-h-60 rounded-xl relative ">
+      <div className="flex-1 max-w-full max-h-60 rounded-xl relative shadow-lg ">
         <Image
           src={image}
           alt="Item"
