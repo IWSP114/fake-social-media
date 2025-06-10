@@ -4,7 +4,7 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 export function GameItem({ name, players, category, image }: { name: string, players?: number, category?: string, image: StaticImport }) {
   return (
-    <div className="w-48 sm:w-45 h-30 sm:h-48 rounded-xl shadow-xl relative hover:opacity-95 cursor-pointer">
+    <div className="w-40 sm:w-48 h-30 sm:h-48 rounded-xl shadow-xl relative hover:opacity-95 cursor-pointer">
       <Image
         src={image}
         alt={name}
