@@ -35,7 +35,7 @@ export default function Reel({ username, message, likes, comments, shares, views
   }
 
   return (
-    <div className="sm:min-w-3/5 sm:max-w-3/5 border-gray-100 border-1 border-solid rounded-xl py-2 bg-white shadow-lg mb-4">
+    <div className="w-screen sm:min-w-3/5 sm:max-w-3/5 border-gray-100 border-1 border-solid rounded-xl py-2 bg-white shadow-lg mb-4">
       <div className="flex flex-col">
         {/* Post Header */}
         <div className="flex justify-between p-2">
