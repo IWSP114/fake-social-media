@@ -12,7 +12,7 @@ import { JSX, useEffect, useRef, useState } from 'react';
 import HeaderMenu from './headerMenu';
 import HeaderMessenger from './headerMessenger';
 import HeaderNotification from './headerNotification';
-import { Gamepad2, House, ShoppingBag, TvMinimalPlay, UsersRound } from 'lucide-react';
+import { Gamepad2, House, Search, ShoppingBag, TvMinimalPlay, UsersRound } from 'lucide-react';
 
 export function Header(): JSX.Element {
   const pathname: string = usePathname();

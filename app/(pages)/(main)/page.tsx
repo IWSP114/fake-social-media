@@ -13,7 +13,7 @@ import Image from "next/image";
 
 import PostPicture1 from "../../../assest/MainPage/posts-picture1.png"
 import { Stories } from './(rightSideBar)/storyList';
-import { ImagePlus, SmilePlus, Video } from 'lucide-react';
+import { ImagePlus, Search, SmilePlus, Video } from 'lucide-react';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)

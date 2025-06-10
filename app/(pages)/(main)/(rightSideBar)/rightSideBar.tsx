@@ -1,14 +1,11 @@
 "use client"
 
-import SearchIcon from "../../../../assest/MainPage/search-icon.png"
-import AddIcon from "../../../../assest/MainPage/add-icon.png"
-import Image from "next/image"
 import { ContactPerson } from "./contactPerson"
+import { ContactPersonList, ContactGroupList } from "./contactList"
 import { ChatRoom } from "./chatRoom"
+import { Plus, Search } from "lucide-react"
 
 export function RightSideBar() {
-  const usernames:string[] = ["Peter", "Eddy", "Jack", "Roy", "Tom", "Alex", "Leo", "Max"]
-  const chatRooms:string[] = ["Fam Bam", "Sister, Sister", "Modern Family", "Ride or Diet", "Escape Artist", "League of Legends", "Coffee Crew"]
 
   return (
     <div className="fixed top-16 right-0 w-1/6 h-[calc(100vh-5rem)] hidden md:flex flex-col px-2 text-stone-800 border-gray-300 border-l-1 border-solid overflow-y-hidden hover:overflow-y-auto">
@@ -20,20 +17,13 @@ export function RightSideBar() {
             <h3 className="font-semibold antialiased text-lg text-slate-700 ml-2">Contact Person</h3>
 
             <div className="rounded-full w-6 h-6 cursor-pointer">
-              <Image
-                src={SearchIcon}
-                alt="User Icon"
-                style={{
-                  width: 'auto',
-                  height: '100%',
-                  objectFit: 'contain'
-                }} />
+              <Search size={16} />
             </div>
           </div>
 
           {/* Contact Persons */}
-          {usernames.map((username: string) => (
-            <ContactPerson key={username} username={username} />
+          {ContactPersonList.map((user) => (
+            <ContactPerson key={user.name} username={user.name} image={user.image} />
           ))}
 
         </div>
@@ -45,19 +35,13 @@ export function RightSideBar() {
           </div>
 
           {/* Chat Rooms */}
-          {chatRooms.map((rooms: string) => (
-            <ChatRoom key={rooms} chatRoomName={rooms} />
+          {ContactGroupList.map((room) => (
+            <ChatRoom key={room.name} roomname={room.name} image={room.image} />
           ))}
 
           <div className="flex items-center gap-2 rounded-lg hover:bg-gray-200 p-2 cursor-pointer">
             <div className="relative rounded-full w-10 h-10 p-2 bg-gray-200 overflow-hidden">
-              <Image
-                src={AddIcon}
-                alt="Add Icon"
-                fill
-                sizes="40px"
-                className="object-cover"
-              />
+              <Plus />
             </div>
             <h2 className="font-normal text-lg">Create a group chat room</h2>
           </div>
