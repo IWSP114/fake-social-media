@@ -79,7 +79,7 @@ export default function Reel({ username, message, likes, comments, shares, views
 
         {/* Post Footer */}
         <div className="flex justify-between p-2 border-gray-300 border-b-1 border-solid">
-          <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{isLiked ? (`You and other ${likes} people liked`) : (`${likes} likes`)}</div>
+          <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{isLiked ? (` ${likes + 1} liked`) : (`${likes} liked`)}</div>
 
           <div className="flex gap-2">
             <div className="text-sm font-bold text-gray-500 tracking-tighter cursor-pointer hover:underline">{comments} Comments</div>

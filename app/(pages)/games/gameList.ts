@@ -49,7 +49,7 @@ export const PopularGames: Games[] = [
 
 export const YourFavouritePick: Games[] = [
   {
-    name: 'SudoKu',
+    name: 'Sudoku',
     category: 'Puzzle',
     image: SudoKuImg,
   },
@@ -69,7 +69,7 @@ export const YourFavouritePick: Games[] = [
     image: VitaMahjong,
   },
   {
-    name: 'UNOImg',
+    name: 'UNO',
     category: 'Puzzle',
     image: UNOImg,
   },
