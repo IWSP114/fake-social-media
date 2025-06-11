@@ -1,9 +1,8 @@
 "use client"
 
 import React, { memo } from 'react'
-import Image from 'next/image'
-import StarIcon from '../../assest/star-icon.png'
 import Link from 'next/link'
+import { Star } from 'lucide-react'
 
 function HeaderMenu({ visable }: { visable: boolean }) {
   return (
@@ -63,54 +62,22 @@ function HeaderMenu({ visable }: { visable: boolean }) {
             <h3 className="text-xl font-bold">Establish</h3>
 
             <div className="flex items-center gap-2 my-4 p-2 hover:bg-slate-100 cursor-pointer rounded-lg">
-              <Image
-                src={StarIcon}
-                alt="Star Icon"
-                width={30}
-                height={30}
-                style={{
-                  objectFit: 'contain'
-                }}
-              />
+              <Star />
               <h3 className="text-lg font-medium inline">Posts</h3>
             </div>
 
             <div className="flex items-center gap-2 my-4 p-2 hover:bg-slate-100 cursor-pointer rounded-lg">
-              <Image
-                src={StarIcon}
-                alt="Star Icon"
-                width={30}
-                height={30}
-                style={{
-                  objectFit: 'contain'
-                }}
-              />
+              <Star />
               <h3 className="text-lg font-medium">Story / Stories</h3>
             </div>
 
             <div className="flex items-center gap-2 my-4 p-2 hover:bg-slate-100 cursor-pointer rounded-lg">
-              <Image
-                src={StarIcon}
-                alt="Star Icon"
-                width={30}
-                height={30}
-                style={{
-                  objectFit: 'contain'
-                }}
-              />
+              <Star />
               <h3 className="text-lg font-medium">Reels</h3>
             </div>
 
             <div className="flex items-center gap-2 my-4 p-2 hover:bg-slate-100 cursor-pointer rounded-lg">
-              <Image
-                src={StarIcon}
-                alt="Star Icon"
-                width={30}
-                height={30}
-                style={{
-                  objectFit: 'contain'
-                }}
-              />
+              <Star />
               <h3 className="text-lg font-medium">Life Events</h3>
             </div>
           </div>
@@ -119,41 +86,17 @@ function HeaderMenu({ visable }: { visable: boolean }) {
           <div className="px-2">
 
             <div className="flex items-center gap-2 my-4 p-2 hover:bg-slate-100 cursor-pointer rounded-lg">
-              <Image
-                src={StarIcon}
-                alt="Star Icon"
-                width={30}
-                height={30}
-                style={{
-                  objectFit: 'contain'
-                }}
-              />
+              <Star />
               <h3 className="text-lg font-medium">Pages</h3>
             </div>
 
             <div className="flex items-center gap-2 my-4 p-2 hover:bg-slate-100 cursor-pointer rounded-lg">
-              <Image
-                src={StarIcon}
-                alt="Star Icon"
-                width={30}
-                height={30}
-                style={{
-                  objectFit: 'contain'
-                }}
-              />
+              <Star />
               <h3 className="text-lg font-medium">Advertise</h3>
             </div>
 
             <div className="flex items-center gap-2 my-4 p-2 hover:bg-slate-100 cursor-pointer rounded-lg">
-              <Image
-                src={StarIcon}
-                alt="Star Icon"
-                width={30}
-                height={30}
-                style={{
-                  objectFit: 'contain'
-                }}
-              />
+              <Star />
               <h3 className="text-lg font-medium">Groups</h3>
             </div>
           </div>
